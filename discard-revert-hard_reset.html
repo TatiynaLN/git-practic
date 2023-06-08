@@ -12,6 +12,35 @@
     discard - не отправлять в репозиторий изменения которые нам не нужны
     <br>
     git revert - откатить существующие но не за пушенные коммиты
+    <p># Выполним реверт предпоследнего коммита. Кстати, такой реверт никогда не вызовет конфликтов.
+
+        $ git revert HEAD~1
+        
+        # Как только мы выполним команду, будет открыт консольный редактор, чтобы вы могли отредактировать сообщение нового коммита. Можно что-то дописать, можно сразу закрыть редактор сочетанием Ctrl+X (здесь приведено сочетание для редактора “nano”). Решать вам. В нашем случае окно редактора будет выглядеть так.
+        
+        Revert "L-04: Addit docs.txt"
+        
+        This reverts commit aadfbc3a6756289727e56ac3de59004e66e40033.
+        
+        # Please enter the commit message for your changes. Lines starting
+        # with '#' will be ignored, and an empty message aborts the commit.
+        #
+        # On branch master
+        # Your branch is up to date with 'origin/master'.
+        #
+        # Changes to be committed:
+        #       modified:   docs.txt
+        #
+        
+        
+        
+        ^G Get Help  ^O Write Out ^W Where Is  ^K Cut Text  ^J Justify   ^C Cur Pos
+        ^X Exit      ^R Read File ^\ Replace   ^U Paste Text^T To Spell  ^_ Go To Line
+        
+        # После закрытия редактора, в терминал будет выведена информация об успешном реверте коммита
+        
+        [main e933971] Revert "addit docs.txt"
+         1 file changed, 1 insertion(+), 1 deletion(-)</p>
     <br>
     <p>
         <b>git reset --soft HEAD^</b>
