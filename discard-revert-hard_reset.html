@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     test все <b>подтвержденные</b> команды жирные
     <br>
@@ -13,9 +15,29 @@
     <br>
     git revert - откатить существующие но не за пушенные коммиты
     <br>
+    <p>
+        <b>git reset --soft HEAD^</b>
+        Некорректный коммит
+        1) git commit
+        Переход к работе над уже совершенным коммитом, сохраняя все состояние проекта и проиндексированные файлы
+        2) git reset --soft HEAD^
+        Редактирование файла или файлов
+        Добавление файлов в индекс
+        3) git add .
+        Возврат к последнему коммиту, будет предложено отредактировать его сообщение
+        4) git commit -c ORIG_HEAD
+        Если сообщение оставить прежним, то достаточно изменить регистр ключа -с
+        git commit -C ORIG_HEAD
+        <br>
+        git add .
+git commit -m «destined to death»
+git reset --hard HEAD~1 — больше никто и никогда не увидит этот позорный коммит...
+git reset --hard HEAD~3 — ...вернее, три последних коммита. Никто. Никогда!
+    </p>
     git hard reset - вернуться к первоначальному состоянию все последние не запушенные коммиты
     <br>
 
-    
+
 </body>
+
 </html>
